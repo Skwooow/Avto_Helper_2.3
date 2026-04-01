@@ -1,0 +1,18 @@
+# netlify.toml
+[build]
+  # Укажите папку, в которую собирается ваш сайт
+  # Если у вас простой HTML/CSS/JS — скорее всего, это текущая папка → оставьте "."
+  # Если используете сборщик (Vite, React, Vue и т.д.) — укажите папку билда (dist, build, public)
+  publish = "."
+
+[context.production]
+  # Пароль для основного сайта (production)
+  password = "авто123"
+
+[context.deploy-preview]
+  # Пароль для preview-версий (при pull request)
+  password = "preview123"
+
+[context.branch-deploy]
+  # Пароль для деплоев из веток (кроме main/master)
+  password = "branch123"
