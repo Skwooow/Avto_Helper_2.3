@@ -16,7 +16,6 @@ $color-additional : #1C1C1C;
 
 html {
   scroll-behavior: smooth;
-  // ✅ Улучшаем рендеринг шрифтов
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -26,7 +25,6 @@ body {
     color: #fff;
     font-family: $body-font;
     margin: 0 auto;
-    // ✅ Предотвращаем горизонтальный скролл
     overflow-x: hidden;
 }
 
@@ -39,7 +37,6 @@ textarea,
 button,
 select { 
   font: inherit;
-  // ✅ Убираем стандартные стили для лучшего контроля
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -104,7 +101,6 @@ body.no-scroll {
     font-weight: $font-bold;
     padding: 0 20px;
     z-index: 100;
-    // ✅ Улучшаем производительность fixed элемента
     will-change: transform;
 }
 
@@ -173,7 +169,6 @@ body.no-scroll {
   cursor: pointer;
   z-index: 101;
   
-  // ✅ Доступный фокус
   &:focus-visible {
     outline: 2px solid $color-main;
     outline-offset: 2px;
@@ -221,11 +216,7 @@ body.no-scroll {
   font-size: $font-size-medium;
   height: auto;
   line-height: 170%;
-  font-weight: $font-light;
-  
-  // ✅ Убираем will-change — он может вызывать конфликты
-  // will-change: opacity, transform;
-  
+  font-weight: $font-light;  
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 2s ease, transform 2s ease;
@@ -269,7 +260,6 @@ body.no-scroll {
     width: auto;
     height: 300px;
     object-fit: contain;
-    // ✅ Предотвращаем сдвиги
     max-width: 100%;
 }
 
@@ -388,7 +378,6 @@ body.no-scroll {
   &:focus {
     outline: none;
     border-color: rgba(255, 255, 255, 0.9);
-    // ✅ Доступный фокус
     box-shadow: 0 0 0 3px rgba(38, 114, 255, 0.3);
   }
 
@@ -458,7 +447,6 @@ body.no-scroll {
     background-color: scale-color($color-main, $lightness: -10%);
   }
   
-  // ✅ Доступный фокус
   &:focus-visible {
     outline: 2px solid #fff;
     outline-offset: 2px;
@@ -501,7 +489,6 @@ body.no-scroll {
     cursor: pointer;
     transition: transform 1.2s ease;
     
-    // ✅ Доступный фокус
     &:focus-visible {
       outline: 2px solid $color-main;
       outline-offset: 2px;
@@ -558,8 +545,6 @@ body.no-scroll {
   align-items: center;
   text-align: center;
   box-sizing: border-box;
-  // ✅ Убираем дублирующийся padding
-  // padding: 0 20px; ← удалено, так как уже есть выше
 }
 
 .mobile-service__details-item.fade-in,
@@ -703,7 +688,6 @@ address {
         color: inherit;
       }
       
-      // ✅ Доступный фокус
       &:focus-visible {
         outline: 2px solid $color-main;
         outline-offset: 2px;
@@ -1013,7 +997,6 @@ address {
     transform: scale(0.95);
   }
   
-  // ✅ Доступный фокус
   &:focus-visible {
     outline: 2px solid $color-main;
     outline-offset: 2px;
